@@ -26,16 +26,17 @@ public class Collection {
 		ArrayList<Integer> list = new ArrayList<>();
 		
 		for (int i = 0; i < 5; i++) {
+			System.out.println((i+1)+"번째 배열 숫자 입력");
 			list.add(s.nextInt());
 		}
 		
 		Collections.sort(list);
 		printList(list);//static으로 선언되어서 메소드 
 		
-		Collections.reverse(list);
-		printList(list);//static으로 선언되어서 메소드 s
+//		Collections.reverse(list);
+//		printList(list);//static으로 선언되어서 메소드 s
 		
-		System.out.println("입력한 숫자중에 하나만 입력하세요.");
+		System.out.println("입력한 숫자중 찾을 숫자 하나만 입력하세요.");
 		int i = s.nextInt();
 		int index = Collections.binarySearch(list, i) + 1;
 		System.out.println("입력하는값은 " + index + "번째에 있습니다.");
